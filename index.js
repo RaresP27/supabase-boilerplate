@@ -9,9 +9,9 @@ async function getBooks() {
   .from('Books')
   .select('*')
 
-for (let book of Books) {
-  let bookList = document.getElementById('Books');
-  bookList.innerHTML += `<li>${book.title} - ${book.author} : ${book.isbn}</li>` ;
-} 
-}
-getBooks();
+  for (let book of Books) {
+    let bookList = document.getElementById('Books');
+    bookList.innerHTML += `<li>${book.title} - ${book.author} : ${book.isbn} - ${book.description}</li>`;
+  } 
+  }
+  getBooks();
